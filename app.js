@@ -16,11 +16,11 @@ const options = {
   cert: sslcert
 };
 
-http.createServer((req, res) => {
-  res.writeHead(301, { 'Location': 'https://localhost:8000/secure' + req.url });
+/*http.createServer((req, res) => {
+  res.writeHead(301, { 'Location': 'https://10.114.34.37/app/secure' + req.url });
   res.end();
 }).listen(3000);
-
+*/
 https.createServer(options, app).listen(httpsPort);
 
 

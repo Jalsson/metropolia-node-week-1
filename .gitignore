@@ -64,7 +64,6 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
-
 # Yarn Integrity file
 .yarn-integrity
 
@@ -81,6 +80,11 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 dist
+
+#localhost https key cand certificates
+ssl-key.pem
+ssl-cert.pem
+certrequest.csr
 
 # Gatsby files
 .cache/

@@ -15,6 +15,7 @@ const options = {
   key: sslkey,
   cert: sslcert
 };
+
 http.createServer((req, res) => {
   res.writeHead(301, { 'Location': 'https://localhost:8000/secure' + req.url });
   res.end();
@@ -36,3 +37,8 @@ app.get('/catinfo', (req, res) => {
     };
     res.json(cat);
   });
+
+  module.exports = (app, httpsPort, httpPort) => {
+    https.createServer(options, app).listen(httpsPort);
+    http.createServer(httpsRedirect).listen(httpPort);
+   };

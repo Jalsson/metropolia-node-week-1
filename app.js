@@ -23,7 +23,6 @@ http.createServer((req, res) => {
 
 https.createServer(options, app).listen(httpsPort);
 
-//app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 app.get('/secure', (req, res) => {
   res.send(`Hello Secure World! ${req.secure}`);
